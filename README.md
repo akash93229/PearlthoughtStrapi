@@ -1,193 +1,112 @@
-# 📚 E-Library – Strapi Project Setup (README)
+📚 E-Library – Strapi Project Setup
 
-This project is a **Strapi-based E-Library CMS** created after cloning a GitHub repository and setting up the complete development environment using Node.js, Yarn, NPM, and VS Code. This README explains everything step‑by‑step in a professional and developer‑friendly format.
+This project is a Strapi-based E-Library CMS created after cloning a GitHub repository and setting up the complete development environment using Node.js, Yarn, NPM, and VS Code. This README explains everything step‑by‑step in a professional and developer‑friendly format.
 
----
+🚀 Project Overview
 
-## 🚀 Project Overview
+The E-Library project helps manage books and related metadata using Strapi’s powerful headless CMS features. It includes fields such as:
 
-The **E-Library** project helps manage books and related metadata using Strapi’s powerful headless CMS features. It includes fields such as:
+Book (Short Text)
 
-* **Book** (Short Text)
-* **BookID** (UID)
-* **BookTitle** (Short Text)
-* **BookAuthor** (Short Text)
-* Additional optional fields (cover image, status, publication year, etc.)
+BookID (UID)
 
----
+BookTitle (Short Text)
 
-## 🛠️ Prerequisites
+BookAuthor (Short Text)
+
+Additional optional fields (cover image, status, publication year, etc.)
+
+🛠️ Prerequisites
 
 Before setting up the project, ensure the following tools are installed:
 
-### ✔ Node.js (Recommended: v20 LTS)
+✔ Node.js (Recommended: v20 LTS)
 
-Download from: [https://nodejs.org/](https://nodejs.org/)
+Download from: https://nodejs.org/
 
-### ✔ Git
+✔ Git
 
-Download from: [https://git-scm.com/](https://git-scm.com/)
+Download from: https://git-scm.com/
 
-### ✔ VS Code
+✔ VS Code
 
-Download from: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+Download from: https://code.visualstudio.com/
 
-### ✔ Yarn (Latest version via Corepack)
-
-```bash
+✔ Yarn (Latest version via Corepack)
 corepack enable
 corepack prepare yarn@4.5.0 --activate
-```
 
----
-
-## 📥 Clone the GitHub Repository
-
-Open PowerShell or VS Code terminal and run:
-
-```bash
+📥 Clone the GitHub Repository
 git clone <your-repository-url>
 cd <project-folder>
-```
 
----
-
-## 📦 Install Dependencies
-
-Run the following command inside the project folder:
-
-```bash
+📦 Install Dependencies
 yarn install
-```
-
-If you prefer npm:
-
-```bash
+# or
 npm install
-```
 
----
-
-## ▶️ Start the Strapi Development Server
-
-To run your project locally:
-
-```bash
+▶️ Start the Strapi Development Server
 yarn develop
-```
-
-Or with npm:
-
-```bash
+# or
 npm run develop
-```
 
-This will open the Strapi Admin panel at:
 
-```
-http://localhost:1337/admin
-```
+Admin panel: http://localhost:1337/admin
+Create your Strapi Admin Account when prompted.
 
-You will be asked to create a new **Strapi Admin Account**.
+🧱 Creating the E-Library Collection Type
 
----
+Go to Content-Type Builder
 
-## 🧱 Creating the E-Library Collection Type
+Click Create new Collection Type → E-Library
 
-Inside Strapi Admin Panel:
+Add fields:
 
-### 1️⃣ Go to **Content-Type Builder**
+Field	Type	Description
+Book	Text	Book category/label
+BookID	UID	Unique ID linked to Book
+BookTitle	Text	Name of the book
+BookAuthor	Text	Author of the book
 
-### 2️⃣ Click **Create new Collection Type** → Enter name:
+Click Save → Strapi restarts automatically.
 
-```
-E-Library
-```
+✍️ Creating Your First Book Entry
 
-### 3️⃣ Add the following fields:
+Go to E-Library in the sidebar
 
-#### **Book**
+Click Create New Entry
 
-* Type: Text
-* Description: Book category/label
+Fill details:
 
-#### **BookID**
+Book: "A classic novel"
+BookID: "123"
+BookTitle: "Pride and Prejudice"
+BookAuthor: "Jane Austen"
+Status: "Published"
 
-* Type: UID
-* Target Field: Book
 
-#### **BookTitle**
+Click Publish ✅
 
-* Type: Text
-* Description: Name of the book
+🔗 API Access
 
-#### **BookAuthor**
+Get all books: GET /api/e-libraries
 
-* Type: Text
-* Description: Author name
+Get a single book by ID: GET /api/e-libraries/:id
 
-### 4️⃣ Click **Save** → Strapi will restart automatically.
+🧩 Optional Enhancements
 
----
+Cover Image (Media)
 
-## ✍️ Creating Your First Book Entry
+Publication Year (Number)
 
-### 1. Go to **E-Library** (Left Sidebar)
+Genre (Text)
 
-### 2. Click **Create New Entry**
+Summary (Rich Text)
 
-### 3. Fill the details:
+Rating (Number)
 
-* Book: "A classic novel"
-* BookID: "123"
-* BookTitle: "Pride and Prejudice"
-* BookAuthor: "Jane Austen"
-* Status: "Published"
+📝 Conclusion
 
-### 4. Click **Publish**
+Your Strapi E-Library CMS is fully set up. You can now expand your schema, connect a frontend, or deploy to cloud platforms.
 
-Your entry is now saved.
-
----
-
-## 🔗 API Access
-
-Strapi automatically generates APIs for your collection types.
-
-### Get all books:
-
-```
-GET /api/e-libraries
-```
-
-### Get a single book by ID:
-
-```
-GET /api/e-libraries/:id
-```
-
----
-
-## 🧩 Optional Enhancements
-
-You can add more fields such as:
-
-* Cover Image (Media)
-* Publication Year (Number)
-* Genre (Text)
-* Summary (Rich Text)
-* Rating (Number)
-
----
-
-## 📝 Conclusion
-
-Your Strapi E-Library CMS is now fully set up and running. You can continue to expand your schema, connect a frontend (React, Next.js, Angular), or deploy it to Strapi Cloud, AWS, DigitalOcean, etc.
-
-If you want, I can also generate:
-
-* A **frontend UI** for your library
-* **API documentation**
-* **Deployment guide**
-
-Just let me know! 🚀
+Welcome to PearlThoughts—let's embark on this journey together!
