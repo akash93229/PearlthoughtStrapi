@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "e_libraries",
+  "info": {
+    "singularName": "e-library",
+    "pluralName": "e-libraries",
+    "displayName": "E-Library "
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Book": {
+      "type": "string"
+    },
+    "BookID": {
+      "type": "uid",
+      "targetField": "Book"
+    },
+    "BookTitle": {
+      "type": "string"
+    },
+    "BookAuthor": {
+      "type": "string"
+    }
+  }
+}
